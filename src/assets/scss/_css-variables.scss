@@ -1,0 +1,16 @@
+:root {
+  --white:  #FFFFFF;
+  --blue:   #005BC1;
+  --blue-2: rgba(var(--blue), 0.6);
+  --text:   #343434;
+  --grey:   #343434;
+  --header-blue: rgba(0, 90, 193, 0.6);
+
+  --wrap: 1110px;
+
+  // @include media(">medium") {
+    --gap: 96px;
+    --halfGap: 48px;
+    --headerHeight: 80px;
+  // }
+}

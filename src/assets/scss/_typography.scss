@@ -1,0 +1,121 @@
+@import '@/assets/scss/_scss-variables.scss';
+@import '@/assets/scss/general/mixins.scss';
+
+html,
+button,
+input,
+textarea {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text);
+}
+a {
+  color: currentColor;
+}
+
+.ft-h1,
+.ft-h2,
+.ft-h3,
+.ft-h4,
+.ft-h6 {
+  font-family: 'Oswald-Medium', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.ft-h1 {
+  font-weight: 500;
+  font-size: 48px;
+
+  @include media(">medium") {
+    line-height: 1.47em;
+  }
+
+  @include media("<=medium") {
+    line-height: 1.2em;
+  }
+}
+
+.ft-h2 {
+  font-size: 30px;
+  line-height: 1.46em;
+}
+
+.ft-h3 {
+  font-size: 24px;
+  line-height: 1.5em;
+}
+
+.ft-h4 {
+  font-size: 18px;
+  line-height: 1.35em;
+  font-weight: 600;
+}
+
+// .ft-h5 {
+//   font-weight: 700;
+//   line-height: 1.5em;
+//   @include fluid-type($extratiny, $medium, 18px, 26px);
+// }
+
+.ft-h6 {
+  line-height: 1.4em;
+  font-size: 14px;
+}
+
+.ft-lead {
+  font-weight: 300;
+  line-height: 1.39em;
+  font-size: 18px;
+}
+
+.ft-reg,
+%ft-reg {
+  font-weight: 300;
+  line-height: 1.37em;
+  font-size: 16px;
+}
+
+.ft-small {
+  font-weight: 300;
+  line-height: 1.35em;
+  font-size: 14px;
+}
+
+// .ft-subheader {
+//   letter-spacing: 0.19em;
+//   line-height: 1.4em;
+
+//   @include media(">medium") {
+//     font-size: 16px;
+//   }
+
+//   @include media("<=medium") {
+//     font-size: 14px;
+//   }
+// }
+
+// Colors
+.ft-white {
+  color: var(--white);
+}
+
+.ft-black {
+  color: var(--black);
+}
+
+// Others
+.ft-txt-upper {
+  text-transform: uppercase;
+}
+
+.ft-txt-strong {
+  font-weight: 700;
+}
+
+.ft-nav-link {
+  font-size: 14px;
+  line-height: 1.4em;
+  font-weight: 600;
+  color: var(--white);
+
+  
+}

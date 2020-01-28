@@ -1,0 +1,82 @@
+@import '@/assets/scss/_scss-variables.scss';
+@import '@/assets/scss/general/mixins.scss';
+
+.ft-btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-left: 1.33em;
+  padding-right: 1.33em;
+  font-weight: 700;
+  color: var(--white);
+  overflow: hidden;
+  z-index: 0;
+
+  @include media(">tiny") {
+    font-size: 16px;
+    min-height: 3em;
+    min-width: 170px;
+  }
+
+  @include media("<=tiny") {
+    font-size: 14px;
+    min-height: 2.5em;
+    width: 100%;
+  }
+
+  * {
+    pointer-events: none;
+  }
+
+  &>span {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font: inherit;
+    transition: all 0.2s;
+
+    & > span {
+      font: inherit;
+      margin: auto;
+    }
+
+    svg {
+      position: relative;
+      left: -0.4em;
+      width: 26px;
+      margin-right: 0.1em;
+      color: var(--blue);
+    }
+  }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    content: '';
+    z-index: -1;
+    transition: all 0.2s;
+    pointer-events: none;
+    background-color: var(--blue);
+  }
+
+  &:hover {
+    &::after {
+      opacity: .8;
+    }
+  }
+
+  &--cut {
+    border: 2px solid var(--white);
+
+    &:after {
+      background-color: rgba(0,0,0,0);
+    }
+  }
+}
