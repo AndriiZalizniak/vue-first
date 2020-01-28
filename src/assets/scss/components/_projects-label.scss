@@ -1,0 +1,18 @@
+.ft-projects-label {
+  padding: 20px 25px;
+  position: absolute;
+  right: 35px;
+  bottom: 35px;
+  max-width: 250px;
+  background-color: var(--white);
+
+  &__wrap {
+
+  }
+
+  &__title {
+    padding-bottom: 14px;
+  }
+
+  &__subtitle {}
+}

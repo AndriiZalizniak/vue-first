@@ -2,24 +2,24 @@
   <div id="app">
     <header-block></header-block>
     <hero-block></hero-block>
-    <arrows-pagination></arrows-pagination>
-    <title-quote></title-quote>
+    <projects-block></projects-block>
+    <product-catalog></product-catalog>
   </div>
 </template>
 
 <script>
 import Header from '@/template/Header.vue';
 import Hero from '@/components/Hero.vue';
-import ArrowsPagination from '@/components/ArrowsPagination.vue';
-import TitleQuote from '@/components/TitleQuote.vue';
+import Projects from '@/components/Projects.vue';
+import ProductCatalog from '@/components/ProductCatalog.vue';
 
 export default {
   name: 'app',
   components: {
-    'arrows-pagination': ArrowsPagination,
-    'title-quote': TitleQuote,
     'header-block': Header,
     'hero-block': Hero,
+    'projects-block': Projects,
+    'product-catalog': ProductCatalog,
   },
 };
 </script>

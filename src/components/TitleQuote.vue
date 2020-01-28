@@ -13,6 +13,7 @@ export default {
 <style lang="scss">
   .ft-title-quote {
     margin-right: 40px;
+    display: inline-block;
     position: relative;
     width: 100px;
     height: 15px;
