@@ -4,6 +4,7 @@
     <hero-block></hero-block>
     <projects-block></projects-block>
     <product-catalog></product-catalog>
+    <rent-equip></rent-equip>
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import Header from '@/template/Header.vue';
 import Hero from '@/components/Hero.vue';
 import Projects from '@/components/Projects.vue';
 import ProductCatalog from '@/components/ProductCatalog.vue';
+import Rent from '@/components/Rent.vue';
 
 export default {
   name: 'app',
@@ -20,6 +22,7 @@ export default {
     'hero-block': Hero,
     'projects-block': Projects,
     'product-catalog': ProductCatalog,
+    'rent-equip': Rent,
   },
 };
 </script>
