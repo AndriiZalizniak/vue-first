@@ -16,6 +16,7 @@ a {
 .ft-h2,
 .ft-h3,
 .ft-h4,
+.ft-h5,
 .ft-h6 {
   font-family: 'Oswald-Medium', sans-serif;
   letter-spacing: 0.05em;
@@ -50,15 +51,14 @@ a {
   font-weight: 600;
 }
 
-// .ft-h5 {
-//   font-weight: 700;
-//   line-height: 1.5em;
-//   @include fluid-type($extratiny, $medium, 18px, 26px);
-// }
+.ft-h5 {
+  font-size: 16px;
+  line-height: 1.5em;
+}
 
 .ft-h6 {
-  line-height: 1.4em;
   font-size: 14px;
+  line-height: 1.4em;
 }
 
 .ft-lead {

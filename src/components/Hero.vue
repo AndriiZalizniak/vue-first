@@ -7,7 +7,9 @@
         <p class="ft-lead ft-white ft-hero__text-subtitle">Продажа, аренда светотехнического оборудования. Оформление официальных мероприятий под ключ.</p>
       </div>
       <div class="ft-hero__btn-block">
-        <button type="button" class="ft-btn ft-btn--cut ft-txt-upper">
+        <button type="button" class="ft-btn ft-btn--cut ft-txt-upper"
+
+        >
           <span>
             Перейти
           </span>
@@ -21,6 +23,7 @@
 
 export default {
   name: 'hero-block',
+
 };
 </script>
 
@@ -36,7 +39,7 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  z-index: -1;
+  z-index: 0;
 
   &::after {
     content: '';

@@ -1,7 +1,9 @@
 <template>
   <!-- eslint-disable max-len -->
   <div class="ft-arrows-pagination">
-    <a href="#" class="ft-arrows-pagination__arrow-triangle ft-arrows-pagination__arrow-triangle--left"></a>
+    <a href="#" class="ft-arrows-pagination__arrow-triangle ft-arrows-pagination__arrow-triangle--left"
+
+    ></a>
     <a href="#" class="ft-arrows-pagination__arrow-triangle ft-arrows-pagination__arrow-triangle--right ft-arrow-reverse"></a>
   </div>
 </template>
