@@ -1,6 +1,6 @@
 <template>
   <div class="ft-underline-txt">
-    
+
   </div>
 </template>
 

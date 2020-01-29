@@ -26,6 +26,7 @@ export default {
 
 <style lang="scss">
 .ft-hero {
+  margin-bottom: 75px;
   position: relative;
   display: flex;
   align-items: center;
