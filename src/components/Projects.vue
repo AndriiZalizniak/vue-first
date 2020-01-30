@@ -69,7 +69,7 @@ export default {
       position: relative;
       flex: 0 0 48%;
       overflow: hidden;
-      transform: translate3d(0,0,0);
+      // transform: translate3d(0,0,0);
 
       &:hover {
         img {
@@ -81,7 +81,7 @@ export default {
 
     img {
       transition: all 1s;
-      transform: translate3d(0,0,0);
+      // transform: translate3d(0,0,0);
       background: linear-gradient(0% rgba(0, 0, 0, 0.5), 100% rgba(0, 0, 0, 0.5));
     }
   }
