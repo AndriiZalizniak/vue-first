@@ -1,30 +1,18 @@
 <template>
+<!-- eslint-disable max-len -->
   <div id="app">
     <header-block></header-block>
-
-    <hero-block></hero-block>
-    <projects-block></projects-block>
-    <product-catalog></product-catalog>
-    <rent-equip></rent-equip>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 import Header from '@/template/Header.vue';
-import Hero from '@/components/Hero.vue';
-import Projects from '@/components/Projects.vue';
-import ProductCatalog from '@/components/ProductCatalog.vue';
-import Rent from '@/components/Rent.vue';
-
 
 export default {
   name: 'app',
   components: {
     'header-block': Header,
-    'hero-block': Hero,
-    'projects-block': Projects,
-    'product-catalog': ProductCatalog,
-    'rent-equip': Rent,
   },
 };
 </script>

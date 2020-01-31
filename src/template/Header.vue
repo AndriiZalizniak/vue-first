@@ -5,19 +5,19 @@
       <nav class="ft-nav">
         <ul class="ft-nav__list">
           <li class="ft-nav__item ft-nav-link">
-            <a href="#">О компании</a>
+            <router-link to="/about">О компании</router-link>
           </li>
           <li class="ft-nav__item ft-nav-link">
-            <a href="#">Портфолио</a>
+            <router-link to="/portfolio">Портфолио</router-link>
           </li>
           <li class="ft-nav__item ft-nav-link">
-            <a href="#">Каталог</a>
+            <router-link to="/catalog">Каталог</router-link>
           </li>
           <li class="ft-nav__item ft-nav-link">
-            <a href="#">Сервис</a>
+            <router-link to="/service">Сервис</router-link>
           </li>
           <li class="ft-nav__item ft-nav-link">
-            <a href="#">Контакты</a>
+            <router-link to="/contacts">Контакты</router-link>
           </li>
         </ul>
       </nav>

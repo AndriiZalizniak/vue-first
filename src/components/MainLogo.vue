@@ -1,12 +1,12 @@
 <template>
   <div class="ft-main-logo">
-    <a href="#" class="ft-main-logo__wrap">
+    <router-link to="/" class="ft-main-logo__wrap">
       <span class="ft-main-logo__pic"></span>
       <span class="ft-main-logo__text">
         <span>TRANS</span>
         <span>LIGHT</span>
       </span>
-    </a>
+    </router-link>
   </div>
 </template>
 

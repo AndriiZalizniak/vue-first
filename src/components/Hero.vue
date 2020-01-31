@@ -2,7 +2,7 @@
   <!-- eslint-disable max-len -->
   <div class="ft-hero">
     <alert-block
-      v-bind:class="{'alert-show': showAlert}"
+      v-if="showAlert"
     ></alert-block>
     <div class="ft-hero__wrap ft-wrap">
       <div class="ft-hero__text">
@@ -10,13 +10,11 @@
         <p class="ft-lead ft-white ft-hero__text-subtitle">Продажа, аренда светотехнического оборудования. Оформление официальных мероприятий под ключ.</p>
       </div>
       <div class="ft-hero__btn-block">
-        <button type="button" class="ft-btn ft-btn--cut ft-txt-upper"
-          @click="showAlert = !showAlert"
-        >
+        <router-link to="/login" class="ft-btn ft-btn--cut ft-txt-upper">
           <span>
-            Перейти
+            Войти
           </span>
-        </button>
+        </router-link>
       </div>
     </div>
   </div>
@@ -44,7 +42,6 @@ export default {
   position: relative;
   display: flex;
   align-items: center;
-  padding-top: var(--headerHeight);
   background-image: url('../assets/images/hero/hero-bg.jpg');
   background-position: center top;
   background-repeat: no-repeat;

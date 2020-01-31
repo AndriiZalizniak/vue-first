@@ -82,7 +82,6 @@ export default {
     img {
       transition: all 1s;
       // transform: translate3d(0,0,0);
-      background: linear-gradient(0% rgba(0, 0, 0, 0.5), 100% rgba(0, 0, 0, 0.5));
     }
   }
 }

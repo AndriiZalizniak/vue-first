@@ -40,10 +40,10 @@ export default {
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.533);
 
-  transform: scale(0);
-  visibility: hidden;
-  pointer-events: none;
-  transition: all 0.3s;
+  // transform: scale(0);
+  // visibility: hidden;
+  // pointer-events: none;
+  // transition: all 0.3s;
 
   .ft-alert {
     margin: auto;
