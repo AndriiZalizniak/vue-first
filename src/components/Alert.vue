@@ -38,7 +38,7 @@ export default {
   bottom: 0;
   width: 100%;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.533);
+  background-color: rgba(0, 0, 0, 0.5);
 
   // transform: scale(0);
   // visibility: hidden;

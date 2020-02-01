@@ -2,7 +2,7 @@
   <!-- eslint-disable max-len -->
   <section class="ft-login-sec">
     <div class="ft-login ft-wrap">
-      <form class="ft-form" v-on:submit.prevent="onSubmit">
+      <form class="ft-form" v-on:submit.prevent="">
         <ul class="ft-form-list">
           <li>
             <p>
@@ -32,34 +32,58 @@
         </ul>
         <div class="ft-form-btns">
           <button class="ft-btn ft-txt-upper" type="submit" @click="onSubmit">Войти</button>
+          <goback-btn></goback-btn>
         </div>
       </form>
     </div>
+    <alert-block
+      v-if="showAlert"
+    ></alert-block>
   </section>
 </template>
 
 <script>
+// import Account from '@/views/Account.vue';
+import Alert from '@/components/Alert.vue';
+import GoBackBtn from '@/components/GoBackBtn.vue';
+
 export default {
   name: 'login',
+  components: {
+    'alert-block': Alert,
+    'goback-btn': GoBackBtn,
+  },
   data() {
     return {
-      userName: ' ',
-      userPassword: ' ',
-      providerTemp: [
-        {
-          login: 'Andrii',
-          password: '123',
-        },
-      ],
+      showAlert: false,
+      userName: '',
+      userPassword: '',
+      // providerTemp: [
+      //   {
+      //     login: 'Andrii',
+      //     password: '123',
+      //   },
+      // ],
+      providerTemp: {
+        login: 'Andrii',
+        password: '123',
+      },
     };
   },
-  // methods: {
-  //   onSubmit() {
-  //     if (this.userName === this.providerTemp.login && this.userPassword === this.providerTemp.password) {
-  //       console.log('1');
-  //     }
-  //   },
-  // },
+  methods: {
+    onSubmit() {
+      const uName = this.userName;
+      const uPassword = this.userPassword;
+      const prTemp = this.providerTemp;
+
+      if (uName === prTemp.login && uPassword === prTemp.password) {
+        console.log(uName);
+        console.log(this.userPassword);
+      } else {
+        this.showAlert = !this.showAlert;
+      }
+    },
+  },
 };
 </script>
 
@@ -97,6 +121,8 @@ export default {
     }
 
     &-btns {
+      display: flex;
+      justify-content: space-evenly;
       text-align: center;
     }
   }

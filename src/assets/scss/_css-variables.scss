@@ -2,17 +2,31 @@
   --white:  #FFFFFF;
   --blue:   #005BC1;
   --blue-2: rgba(var(--blue), 0.6);
+  --blue-3: #634de0;
   --text:   #343434;
   --grey:   #343434;
   --grey-2: #504C68;
 
   --header-blue: rgba(0, 90, 193, 0.6);
-  
-  --wrap: 1206px;
 
-  // @include media(">medium") {
+  --wrap: 1206px;
+  --burger-line: 3px;
+
+  @include media(">medium") {
     --gap: 96px;
     --halfGap: 48px;
     --headerHeight: 80px;
-  // }
+  }
+
+  @include media(">tiny", "<=medium") {
+    --gap: 20px;
+    --halh-gap: 10px;
+    --headerHeight: 60px;
+  } 
+
+  @include media("<=tiny") {
+    --gap: 10px;
+    --halh-gap: 5px;
+    --headerHeight: 55px;
+  }
 }

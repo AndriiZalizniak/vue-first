@@ -1,5 +1,5 @@
-@import '@/assets/scss/_scss-variables.scss';
-@import '@/assets/scss/general/mixins.scss';
+@import '../scss-variables';
+@import '../general/mixins.scss';
 
 body {
   min-width: $extratiny;

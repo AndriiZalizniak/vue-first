@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'account',
+  name: 'user-account',
 };
 </script>
 

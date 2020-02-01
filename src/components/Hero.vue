@@ -1,9 +1,6 @@
 <template>
   <!-- eslint-disable max-len -->
   <div class="ft-hero">
-    <alert-block
-      v-if="showAlert"
-    ></alert-block>
     <div class="ft-hero__wrap ft-wrap">
       <div class="ft-hero__text">
         <h1 class="ft-h1 ft-white ft-hero__text-title">Светотехническое оборудование в Петербурге</h1>
@@ -21,22 +18,21 @@
 </template>
 
 <script>
-import Alert from '@/components/Alert.vue';
-
 export default {
   name: 'hero-block',
-  components: {
-    'alert-block': Alert,
-  },
+  components: {},
   data() {
     return {
-      showAlert: false,
+      // showAlert: false,
     };
   },
 };
 </script>
 
 <style lang="scss">
+@import '@/assets/scss/_scss-variables.scss';
+@import '@/assets/scss/general/mixins.scss';
+
 .ft-hero {
   margin-bottom: 75px;
   position: relative;
@@ -55,11 +51,27 @@ export default {
     position: absolute;
     top: var(--headerHeight);
     bottom: 0;
-    left: 15%;
+
     width: 25%;
     background-color: var(--header-blue);
     z-index: -1;
     transform-origin: center;
+
+    @include media(">1600px") {
+      left: 15%;
+    }
+
+    @include media(">1366px", "<=1600px") {
+      left: 11%;
+    }
+
+    @include media(">medium","<=1366px") {
+      left: 5%;
+    }
+
+    @include media("<=medium") {
+      left: 0;
+    }
   }
 
   &__wrap {

@@ -1,11 +1,12 @@
 <template>
   <!-- eslint-disable max-len -->
   <section class="ft-home-sec">
-    <div class="ft-home"></div>
-    <hero-block></hero-block>
-    <projects-block></projects-block>
-    <product-catalog></product-catalog>
-    <rent-equip></rent-equip>
+    <div class="ft-home">
+      <hero-block></hero-block>
+      <projects-block></projects-block>
+      <product-catalog></product-catalog>
+      <rent-equip></rent-equip>
+    </div>
   </section>
 </template>
 
