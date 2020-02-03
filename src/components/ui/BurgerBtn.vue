@@ -1,35 +1,14 @@
 <template>
-  <button class="ft-burger-btn btn-swap js-toggle-menu"
-    @click="showMenu"
-  >
-    <!-- <div class="burger-menu__inner"> -->
-      <span class="ft-burger-btn__line ft-burger-btn__line--t"></span>
-      <span class="ft-burger-btn__line ft-burger-btn__line--m"></span>
-      <span class="ft-burger-btn__line ft-burger-btn__line--b"></span>
-    <!-- </div> -->
+  <button type="button" class="ft-burger-btn">
+    <span class="ft-burger-btn__line ft-burger-btn__line--t"></span>
+    <span class="ft-burger-btn__line ft-burger-btn__line--m"></span>
+    <span class="ft-burger-btn__line ft-burger-btn__line--b"></span>
   </button>
 </template>
 
 <script>
 export default {
   name: 'burger-btn',
-  data() {
-    return {
-      showMobMenu: false,
-    };
-  },
-  methods: {
-    showMenu() {
-      this.showMobMenu = !this.showMobMenu;
-      console.log('1');
-      // const body = document.querySelector('body');
-
-      // function noScroll() {
-      //   body.style.overflow = 'hidden';
-      // }
-      // noScroll();
-    },
-  },
 };
 </script>
 

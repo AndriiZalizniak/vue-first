@@ -2,19 +2,19 @@
   <nav class="ft-nav">
     <ul class="ft-nav__list">
       <li class="ft-nav__item ft-nav-link">
-        <router-link to="/about">О компании</router-link>
+        <router-link @click="$emit('closeMobNav')" to="/about">О компании</router-link>
       </li>
       <li class="ft-nav__item ft-nav-link">
-        <router-link to="/portfolio">Портфолио</router-link>
+        <router-link @click="$emit('closeMobNav')" to="/portfolio">Портфолио</router-link>
       </li>
       <li class="ft-nav__item ft-nav-link">
-        <router-link to="/catalog">Каталог</router-link>
+        <router-link @click="$emit('closeMobNav')" to="/catalog">Каталог</router-link>
       </li>
       <li class="ft-nav__item ft-nav-link">
-        <router-link to="/service">Сервис</router-link>
+        <router-link @click="$emit('closeMobNav')" to="/service">Сервис</router-link>
       </li>
       <li class="ft-nav__item ft-nav-link">
-        <router-link to="/contacts">Контакты</router-link>
+        <router-link @click="$emit('closeMobNav')" to="/contacts">Контакты</router-link>
       </li>
     </ul>
   </nav>
@@ -23,6 +23,10 @@
 <script>
 export default {
   name: 'navigation-block',
+
+  props: {
+    isShowMenu: Boolean,
+  },
 };
 </script>
 

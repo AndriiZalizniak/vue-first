@@ -24,20 +24,34 @@ a {
 
 .ft-h1 {
   font-weight: 500;
-  font-size: 48px;
-
+  
   @include media(">medium") {
     line-height: 1.47em;
   }
-
+  
   @include media("<=medium") {
     line-height: 1.2em;
+  }
+  
+  @include media(">=small") {
+    font-size: 48px;
+  }
+
+  @include media("<small") {
+    font-size: 40px;
   }
 }
 
 .ft-h2 {
-  font-size: 30px;
   line-height: 1.46em;
+  
+  @include media(">=small") {
+    font-size: 30px;
+  }
+
+  @include media("<small") {
+    font-size: 22px;
+  }
 }
 
 .ft-h3 {

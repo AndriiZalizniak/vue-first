@@ -38,6 +38,7 @@
     </div>
     <alert-block
       v-if="showAlert"
+      @close="showAlert = false"
     ></alert-block>
   </section>
 </template>
@@ -88,6 +89,9 @@ export default {
 </script>
 
 <style lang="scss">
+@import '@/assets/scss/general/mixins.scss';
+@import '@/assets/scss/_scss-variables.scss';
+
 .ft-login-sec {
   padding-top: var(--headerHeight);
   display: flex;
@@ -102,10 +106,13 @@ export default {
   .ft-form {
     margin: 0 auto;
     padding: 25px;
-    width: 600px;
     min-height: 300px;
     border: 1px solid var(--grey);
     border-radius: 25px;
+
+    @include media(">tiny") {
+      max-width: 600px;
+    }
 
     &-list {
       padding-bottom: 25px;
@@ -124,6 +131,16 @@ export default {
       display: flex;
       justify-content: space-evenly;
       text-align: center;
+
+      @include media("<=tiny") {
+        flex-direction: column;
+      }
+
+      &>* {
+        @include media("<=tiny") {
+          margin-bottom: 25px;
+        }
+      }
     }
   }
 }

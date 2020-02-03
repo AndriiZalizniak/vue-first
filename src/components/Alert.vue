@@ -1,12 +1,11 @@
 <template>
   <div class="ft-alert-sec"
-    v-if="!alertHide"
   >
     <div class="ft-alert">
       <!-- <div class="ft-alert__wrap"> -->
         <p class="ft-reg ft-alert__text">No access :(</p>
         <button type="button" class="ft-alert__btn"
-          @click="alertHide = !alertHide"
+          @click="$emit('close')"
         >OK</button>
       <!-- </div> -->
     </div>
@@ -15,13 +14,15 @@
 
 <script>
 export default {
-  name: 'arrows-pagination',
+  name: 'alert-block',
 
-  data() {
-    return {
-      alertHide: false,
-    };
+  props: {
+    isShow: Boolean,
   },
+
+  // data() {
+
+  // },
   // methods: {
   //   Hide() {
   //     this.alertHide = !this.alertHide;

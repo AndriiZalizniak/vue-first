@@ -43,6 +43,9 @@ export default {
 </script>
 
 <style lang="scss">
+@import '@/assets/scss/general/mixins.scss';
+@import '@/assets/scss/_scss-variables.scss';
+
 .ft-projects {
 
   &__wrap {
@@ -50,9 +53,24 @@ export default {
 
   &__top {
     padding-bottom: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-self: auto;
+
+    @include media(">medium") {
+      margin-bottom: 75px;
+    }
+
+    @include media(">tiny","<=medium") {
+      margin-bottom: 50px;
+    }
+
+    @include media("<=tiny") {
+      margin-bottom: 30px;
+    }
+
+    @include media(">tiny") {
+      display: flex;
+      justify-content: space-between;
+      align-self: auto;
+    }
 
     &-title {
       display: flex;
@@ -61,8 +79,14 @@ export default {
   }
 
   &__main {
-    display: flex;
-    justify-content: space-between;
+    @include media(">small") {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include media("<=small") {
+
+    }
 
     &-left,
     &-right {
@@ -70,6 +94,16 @@ export default {
       flex: 0 0 48%;
       overflow: hidden;
       // transform: translate3d(0,0,0);
+
+      @include media("<=small") {
+        display: block;
+      }
+
+      img {
+        @include media("<=small") {
+          width: 100%;
+        }
+      }
 
       &:hover {
         img {

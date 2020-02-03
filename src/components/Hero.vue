@@ -3,7 +3,7 @@
   <div class="ft-hero">
     <div class="ft-hero__wrap ft-wrap">
       <div class="ft-hero__text">
-        <h1 class="ft-h1 ft-white ft-hero__text-title">Светотехническое оборудование в Петербурге</h1>
+        <h1 class="ft-h1 ft-white ft-hero__text-title">Свето&shy;техническое оборудование в Петербурге</h1>
         <p class="ft-lead ft-white ft-hero__text-subtitle">Продажа, аренда светотехнического оборудования. Оформление официальных мероприятий под ключ.</p>
       </div>
       <div class="ft-hero__btn-block">
@@ -34,7 +34,6 @@ export default {
 @import '@/assets/scss/general/mixins.scss';
 
 .ft-hero {
-  margin-bottom: 75px;
   position: relative;
   display: flex;
   align-items: center;
@@ -45,6 +44,18 @@ export default {
   height: 100vh;
   z-index: 0;
   overflow: hidden;
+
+  @include media(">medium") {
+    margin-bottom: 75px;
+  }
+
+  @include media(">tiny","<=medium") {
+    margin-bottom: 50px;
+  }
+
+  @include media("<=tiny") {
+    margin-bottom: 30px;
+  }
 
   &::after {
     content: '';

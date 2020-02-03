@@ -68,7 +68,7 @@ export default {
     align-items: center;
 
     &-descr {
-      flex: 0 0 350px;
+      // flex: 0 0 350px;
     }
 
     &-equip-block {

@@ -11,12 +11,23 @@ export default {
 </script>
 
 <style lang="scss">
+@import '@/assets/scss/general/mixins.scss';
+@import '@/assets/scss/_scss-variables.scss';
+
   .ft-title-quote {
-    margin-right: 40px;
     display: inline-block;
     position: relative;
-    width: 100px;
     height: 15px;
+
+    @include media(">tiny") {
+      margin-right: 40px;
+      width: 100px;
+    }
+
+    @include media("<=tiny") {
+      margin-right: 20px;
+      width: 50px
+    }
 
     &::before,
     &::after {
