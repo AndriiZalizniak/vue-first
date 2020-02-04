@@ -60,9 +60,16 @@ a {
 }
 
 .ft-h4 {
-  font-size: 18px;
   line-height: 1.35em;
   font-weight: 600;
+
+  @include media(">tiny") {
+    font-size: 18px;
+  }
+
+  @include media("<=tiny") {
+    font-size: 16px;
+  }
 }
 
 .ft-h5 {

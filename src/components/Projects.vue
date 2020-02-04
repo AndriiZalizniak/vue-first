@@ -10,14 +10,14 @@
         <arrows-pagination></arrows-pagination>
       </div>
       <div class="ft-projects__main">
-        <a href="#" class="ft-projects__main-left">
+        <a href="#" class="ft-projects__main-card">
           <img src="../assets/images/projects/projects-1.jpg" alt="">
           <div class="ft-projects-label">
             <h4 class="ft-h4">ССК “ОЛИМП”</h4>
             <p class="ft-small">Световое оформление форума “Шубы-2019”</p>
           </div>
         </a>
-        <a href="#" class="ft-projects__main-right">
+        <a href="#" class="ft-projects__main-card">
           <img src="../assets/images/projects/projects-2.jpg" alt="">
            <div class="ft-projects-label">
             <h4 class="ft-h4">ССК “ОЛИМП”</h4>
@@ -52,7 +52,7 @@ export default {
   }
 
   &__top {
-    padding-bottom: 70px;
+
 
     @include media(">medium") {
       margin-bottom: 75px;
@@ -64,17 +64,24 @@ export default {
 
     @include media("<=tiny") {
       margin-bottom: 30px;
+      padding-bottom: 30px;
+      text-align: center;
     }
 
     @include media(">tiny") {
       display: flex;
       justify-content: space-between;
       align-self: auto;
+      padding-bottom: 70px;
     }
 
     &-title {
       display: flex;
       align-items: center;
+
+      @include media("<=tiny") {
+        padding-bottom: 25px;
+      }
     }
   }
 
@@ -88,8 +95,7 @@ export default {
 
     }
 
-    &-left,
-    &-right {
+    &-card {
       position: relative;
       flex: 0 0 48%;
       overflow: hidden;
